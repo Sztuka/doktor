@@ -18,29 +18,27 @@
                         ?>
                     </a>
                 </div>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="navbar-text d-lg-none mb-3">
+                        <a href="#" class="language-toggler pl active">PL</a>
+                        <a href="#" class="language-toggler en">EN</a>
+                    </div>
+                    <?php
+                    wp_nav_menu( array(
+                        'theme_location' => 'header-menu',
+                        'container'      => false,
+                        'menu_class'     => 'navbar-nav',
+                        'fallback_cb'    => '__return_false',
+                        'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                        'depth'          => 3,
+                        'walker'         => new Bootstrap_Walker_Nav_Menu(),
+                    ) );
+                    ?>
+                </div>
                 <!-- Middle container for menu -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <div class="navbar-text d-lg-none mb-3">
-                            <a href="#" class="language-toggler pl active">PL</a>
-                            <a href="#" class="language-toggler en">EN</a>
-                        </div>
-                        <?php
-                        wp_nav_menu( array(
-                            'theme_location' => 'header-menu',
-                            'container'      => false,
-                            'menu_class'     => 'navbar-nav',
-                            'fallback_cb'    => '__return_false',
-                            'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                            'depth'          => 3,
-                            'walker'         => new Bootstrap_Walker_Nav_Menu(),
-                        ) );
-                        ?>
-                    </div>
-                </div>
                 <!-- Right container for language toggler -->
                 <div class="navbar-text">
                     <a href="#" class="language-toggler en"><span>EN</span></a>
