@@ -129,6 +129,7 @@ footer a {
 
 .navbar-collapse {
   width: auto;
+  flex-grow: 0;
   flex-basis: auto;
 }
 
@@ -200,11 +201,22 @@ footer a {
 }
 
 .navbar {
-  background-color: #ffffff; /* Making navbar transparent */
+  background-color: #FFF !important;
   margin-top: 0 ; /* Adding top margin to navbar */
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.12); /* Adding shadow to navbar */
 }
-
+	
+.navbar-toggler {
+    position: absolute;
+    right: 32px;
+    top: 22px;
+}
+	
+.navbar-collapse {
+    height: auto;
+    margin: auto;
+}
+	
 .navbar-nav {
   display: flex !important;
   width: 100%;
