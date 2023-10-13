@@ -199,6 +199,7 @@ footer a {
   background-color: transparent !important; /* Making containers transparent */
   box-shadow: none !important; /* Removing shadow from navbar */
 }
+.navbar-text { display: none }
 
 .navbar {
   background-color: #FFF !important;
